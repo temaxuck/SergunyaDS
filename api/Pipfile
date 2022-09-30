@@ -9,6 +9,7 @@ python-dotenv = "*"
 pymongo = "*"
 passlib = "*"
 flask-restful = "*"
+flask-pymongo = "*"
 
 [dev-packages]
 
