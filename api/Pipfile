@@ -6,10 +6,13 @@ name = "pypi"
 [packages]
 flask = "*"
 python-dotenv = "*"
-pymongo = "*"
 passlib = "*"
 flask-restful = "*"
 flask-pymongo = "*"
+mongoengine = "*"
+flask-mongoengine = "*"
+gunicorn = "*"
+pillow = "*"
 
 [dev-packages]
 

@@ -5,20 +5,23 @@ FROM node:latest
 EXPOSE 3000
 EXPOSE 35729
 
-# Set working directory
-WORKDIR /app
+# Environment variables
+ENV PROJECT_DIR /app
 
-# Add /app/node_modules/.bin to environment variables
-ENV PATH /app/node_modules/.bin:$PATH
+# Set working directory
+WORKDIR ${PROJECT_DIR}
+
+# Add ${PROJECT_DIR}/node_modules/.bin to environment variables
+ENV PATH ${PROJECT_DIR}/node_modules/.bin:$PATH
 
 # Copy package files and install app dependencies
-COPY package.json /app/package.json
-COPY package-lock.json /app/package-lock.json
+COPY package.json ${PROJECT_DIR}/package.json
+COPY package-lock.json ${PROJECT_DIR}/package-lock.json
 RUN npm install
 RUN npm install react-scripts -g
 
 # Add React app to working directory
-ADD . /app
+ADD . ${PROJECT_DIR}
 
 # Start the React app
 CMD ["npm", "start"]
