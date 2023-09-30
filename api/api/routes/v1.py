@@ -44,7 +44,9 @@ class Service(Resource):
                 service.name = name
             elif (status := req_body.get('status')):
                 service.status = status
-
+            elif (description := req_body.get('description')):
+                service.description = description
+                        
             service.save()
             return (jsonify(service).json, 200)
         

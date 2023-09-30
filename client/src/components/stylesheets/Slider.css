@@ -1,0 +1,116 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider {
+  --slider-index: 0;
+
+  display: flex;
+  width: 75%;
+  margin: 0 0.25rem;
+
+  transform: translateX(calc(var(--slider-index) * -100%));
+  transition: transform 500ms ease-in-out;
+}
+
+.sliderItem {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100% / var(--items-per-page));
+  /* width: calc(100% / var(--items-per-page)); */
+  max-width: calc(100% / var(--items-per-page));
+
+  padding: 0.25rem;
+  /* margin: 0.25rem; */
+
+  /* background-color: black; */
+  opacity: 60%;
+}
+
+.sliderItem > a > img {
+  width: 100%;
+  border-radius: 0.25rem;
+  aspect-ratio: var(--card-aspect-ratio-width) / var(--card-aspect-ratio-height);
+  overflow: hidden;
+  /* box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5); */
+}
+
+.sliderItem > a {
+  display: flex;
+  position: relative;
+}
+
+.sliderItem > a::before {
+  box-shadow: inset 15px 15px 10px rgba(255, 255, 255, 0.35);
+  border-radius: 0.25rem;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  /* filter: blur(1px);  */
+}
+
+.handle {
+  width: var(--slider-padding);
+  flex-grow: 0;
+  margin: 0.25rem 0;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  line-height: 0;
+  transition: background-color 150ms ease-in-out;
+  z-index: 10;
+
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+
+  background-color: rgba(0, 0, 0, 0.25);
+
+  transition: opacity 500ms ease-in-out;
+}
+
+.left-handle {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.right-handle {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.handle:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.handle:hover::after {
+  content: "";
+  opacity: 0;
+  /* height: 100%; */
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  transition: opacity 150s ease-in-out;
+}
+
+.left-handle:hover::after {
+  background: url("../../static/images/arrow-left-icon.svg") no-repeat;
+  background-position: center center;
+  opacity: 1;
+}
+
+.right-handle:hover::after {
+  background: url("../../static/images/arrow-right-icon.svg") no-repeat;
+  background-position: center center;
+  opacity: 1;
+}

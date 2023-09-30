@@ -1,0 +1,31 @@
+.progress-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.progress-bar {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: calc(var(--site-wrapper-dimension-unit) * 0.15);
+}
+
+.progress-tick {
+  width: calc(var(--site-wrapper-dimension-unit) * 0.15);
+  height: calc(var(--site-wrapper-dimension-unit) * 0.15);
+
+  border-radius: 50%;
+
+  border: solid 1px rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+.progress-tick:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.progress-tick.active {
+  background-color: rgba(255, 255, 255, 0.65);
+}

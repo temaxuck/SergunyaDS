@@ -1,5 +1,11 @@
+:root {
+  --site-wrapper-dimension-unit: 2rem;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .App-logo {
@@ -35,4 +41,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+html,
+body,
+head,
+#root {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.backgroundStage {
+  position: fixed;
+  z-index: -1;
 }

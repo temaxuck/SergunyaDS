@@ -1,13 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Jura&family=Lexend:wght@100;200;400&display=swap");
+
+/* Bracker */
+@font-face {
+  font-family: Bracker;
+  src: url("static/fonts/ttf/Bracker.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --app-gradient-color-1: #362e2d;
+  --app-gradient-color-2: #050507;
+
+  --font-size: 48px;
+
+  --card-aspect-ratio-width: 5;
+  --card-aspect-ratio-height: 6.6;
+
+  --slider-padding: 12.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
+  height: 100%;
+
+  font-size: var(--font-size);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    Bracker sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: url("static/images/backgroundimage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }

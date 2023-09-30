@@ -1,0 +1,64 @@
+.site {
+  flex-grow: 1;
+}
+
+.site-wrapper {
+  float: right;
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  margin: 2.5vh 0;
+}
+
+.mainlogo {
+  font-family: Bracker;
+  font-size: calc(var(--site-wrapper-dimension-unit) + 5vh + 2vw);
+  line-height: calc(var(--site-wrapper-dimension-unit) + 1vh);
+  text-transform: lowercase;
+}
+
+.sublogo {
+  font-family: "Lexend", sans-serif;
+  font-size: calc(var(--site-wrapper-dimension-unit) * 0.3);
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.services-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-title > span {
+  font-family: "Lexend", sans-serif;
+  font-size: calc(var(--site-wrapper-dimension-unit) * 0.3);
+  font-weight: 200;
+  color: white;
+}
+
+.services-title::after {
+  content: "";
+  display: block;
+
+  height: 4px;
+  width: 150%;
+  background-color: white;
+  margin-left: -25%;
+
+  filter: blur(0.75px);
+  opacity: 0.8;
+}

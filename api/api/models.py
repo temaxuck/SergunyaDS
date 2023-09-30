@@ -14,3 +14,4 @@ class Service(db.Document):
     status = db.EnumField(Status, default=Status.OPENED)
     description = db.StringField(max_length=600)
     image = db.EmbeddedDocumentField(Image)
+    price = db.IntField()
