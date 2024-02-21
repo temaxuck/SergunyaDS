@@ -1,2 +1,2 @@
 # SergunyaDS
-Web-site serving as a kind of billboard
+Landing page for a 3D artist. 
